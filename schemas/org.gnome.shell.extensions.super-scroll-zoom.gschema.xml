@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="super-scroll-zoom">
+  <schema id="org.gnome.shell.extensions.super-scroll-zoom"
+          path="/org/gnome/shell/extensions/super-scroll-zoom/">
+    <key name="zoom-step" type="d">
+      <range min="1.05" max="2.0"/>
+      <default>1.25</default>
+      <summary>Zoom per wheel notch</summary>
+      <description>How much one notch of the scroll wheel multiplies the zoom by.</description>
+    </key>
+    <key name="max-zoom" type="d">
+      <range min="2.0" max="32.0"/>
+      <default>16.0</default>
+      <summary>Maximum zoom</summary>
+      <description>The furthest the screen can be zoomed in.</description>
+    </key>
+    <key name="show-osd" type="b">
+      <default>true</default>
+      <summary>Show the zoom level</summary>
+      <description>Show the zoom level on screen while zooming.</description>
+    </key>
+    <key name="reset-zoom" type="as">
+      <default><![CDATA[['<Super>0']]]></default>
+      <summary>Reset zoom</summary>
+      <description>Shortcut that zooms back out to the normal view.</description>
+    </key>
+  </schema>
+</schemalist>
