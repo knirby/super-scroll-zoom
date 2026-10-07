@@ -143,6 +143,11 @@ export default class SuperScrollZoom extends Extension {
         const level = Math.log(zoom) / Math.log(max);
         const label = `${Math.round(zoom * 100)}%`;
         const monitor = global.display.get_current_monitor();
-        Main.osdWindowManager.showOne(monitor, icon, label, level, 1);
+        // GNOME 49 renamed show() to showOne(); before it, show() took these arguments.
+        const osd = Main.osdWindowManager;
+        if (osd.showOne)
+            osd.showOne(monitor, icon, label, level, 1);
+        else
+            osd.show(monitor, icon, label, level, 1);
     }
 }

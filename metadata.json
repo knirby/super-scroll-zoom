@@ -2,7 +2,7 @@
   "uuid": "super-scroll-zoom@knirby.github.io",
   "name": "Super Scroll Zoom",
   "description": "Hold Super and scroll to zoom the whole screen, anywhere.\n\nZoom follows the pointer, eases between levels and shows its level on screen. Super+0 resets it. Uses GNOME's built-in magnifier.",
-  "shell-version": ["50", "51"],
+  "shell-version": ["46", "47", "48", "49"],
   "url": "https://github.com/knirby/super-scroll-zoom",
   "settings-schema": "org.gnome.shell.extensions.super-scroll-zoom",
   "version-name": "1.1"

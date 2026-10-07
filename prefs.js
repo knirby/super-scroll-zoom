@@ -28,7 +28,16 @@ export default class SuperScrollZoomPreferences extends ExtensionPreferences {
             title: 'Zoom',
             icon_name: 'zoom-in-symbolic',
         });
-        page.set_banner(this._modifierBanner(wm));
+        const banner = this._modifierBanner(wm);
+        // Pages hold a banner from libadwaita 1.7 (GNOME 48); before that it
+        // goes in a group of its own at the top.
+        if (page.set_banner) {
+            page.set_banner(banner);
+        } else {
+            const group = new Adw.PreferencesGroup();
+            group.add(banner);
+            page.add(group);
+        }
         page.add(this._zoomGroup(settings, magnifier));
         page.add(this._shortcutGroup(window, settings));
         window.add(page);
