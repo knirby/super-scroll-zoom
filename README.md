@@ -1,6 +1,6 @@
 # Super Scroll Zoom
 
-Hold **Super** and scroll to zoom the whole screen, anywhere, in GNOME Shell 50 and 51. :3
+Hold **Super** and scroll to zoom the whole screen, anywhere, in GNOME Shell 50 and 51. :3 For GNOME 46 to 49, use the [`gnome-46-49`](https://github.com/knirby/super-scroll-zoom/tree/gnome-46-49) branch.
 
 - Scroll up or down to zoom in or out. It's smooth and follows the pointer.
 - **Super+0** goes back to normal.
